@@ -1,0 +1,242 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
+
+
+    <link rel="icon" href="Favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Laravel</title>
+    <style type="text/css">
+       .upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+} 
+    </style>
+          
+</head>
+<body>
+
+<!--<nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+    <div class="container">
+    <a class="navbar-brand" href="#">Laravel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+        </ul>
+
+    </div>
+    </div>
+</nav>-->
+<br>
+<br>
+<main class="my-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Register</div>
+                        <div class="card-body">
+                            <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+
+                                <div class="form-group row ">
+                                    <div class="col-md-6 "><h1></h1></div>
+                                    <div class="text-center">
+                                      <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                                                <h6>Upload a photo</h6>
+                                            <input type="file" class="text-center center-block file-upload">
+                                                  </div>
+                                    </div><br>
+
+                                <div class="form-group row">
+                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">About yourself</label>
+                                    <div class="col-md-6">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">About your company</label>
+                                    <div class="col-md-6">
+                                        <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                               <!-- <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="email_address" class="form-control" name="email-address">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">User Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="user_name" class="form-control" name="username">
+                                    </div>
+                                </div> -->
+
+                                <div class="form-group row">
+                                    <label for="phone_number" class="col-md-4 col-form-label text-md-right">Phone Number</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="phone_number" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="present_address" class="col-md-4 col-form-label text-md-right">Recent works</label>
+                                    <div class="col-md-4 d-inline-flex p-2">
+                                        <div class="container">
+                                          <div class="panel panel-default">
+                                            <div class="panel-heading"><strong>Upload Files</strong> </div>
+                                            <div class="panel-body">
+
+                                              <!-- Standar Form -->
+                                              <h4>Select files from your computer</h4>
+                                              <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                                                <div class="form-inline">
+                                                  <div class="form-group">
+                                                    <input type="file" name="files[]" id="js-upload-files" multiple>
+                                                  </div>
+                                                  <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                                                </div>
+                                              </form>
+
+                                              <!-- Drop Zone -->
+                                              <h4>Or drag and drop files below</h4>
+                                              <div class="upload-drop-zone" id="drop-zone">
+                                                Just drag and drop files here
+                                              </div>
+
+                                              <!-- Progress Bar -->
+                                              <!-- <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                  <span class="sr-only">60% Complete</span>
+                                                </div>
+                                              </div> -->
+
+                                              <!-- Upload Finished -->
+                                              <!-- <div class="js-upload-finished">
+                                                <h3>Processed files</h3>
+                                                <div class="list-group">
+                                                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+                                                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+                                                </div>
+                                              </div> -->
+                                            </div>
+                                          </div>
+                                        </div> <!-- /container -->
+                                    </div>
+                                </div>
+
+                                <div class="form-group row " id="lol">
+                                    <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Socials</label>
+                                    <div class="col-md-6">
+                                            <div class="col-md-3">
+                                                <div class="custom-control custom-checkbox image-checkbox">
+                                                    <input type="checkbox" class="custom-control-input ck1a" id="ck1a">
+                                                    <label class="custom-control-label" for="ck1a">
+                                                        <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" alt="#" class="img-fluid">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="custom-control custom-checkbox image-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="ck1b">
+                                                    <label class="custom-control-label" for="ck1b">
+                                                        <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" alt="#" class="img-fluid">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="custom-control custom-checkbox image-checkbox">
+                                                    <input type="checkbox" class="custom-control-input " id="ck1c">
+                                                    <label class="custom-control-label" for="ck1c">
+                                                        <img src="https://img.icons8.com/fluent/48/000000/twitter.png" alt="#" class="img-fluid">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <script >
+                                            
+                                            function fun()
+                                            {
+                                            var btn1 = document.getElementById("ck1a");
+                                            if(btn1.checked)
+                                            {
+                                               document.write(5 + 6);
+                                            }
+                                        }
+                                        </script>
+
+                                    </div>
+                                        <br>
+                                       
+                                
+                                     <div class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                        Register
+                                        </button>
+                                    </div>
+                                </div>
+                                   
+                            </form>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
